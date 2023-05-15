@@ -1,0 +1,135 @@
+@import "../abstract/variables";
+
+.header{
+    position: absolute;
+    width: 100%;
+
+    nav{
+        padding: .8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .iconNavMobile{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 99;
+
+            img{
+                width: 4rem;
+            }
+        }
+
+        .btnMenu{
+            background-image: url(../assets/iconMenu.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            width: 3.2rem;
+            height: 3.2rem;
+            border: none;
+            cursor: pointer;
+            z-index: 99;
+        }
+
+        .menu{
+            z-index: 98;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 1.6rem;
+            border-radius: 0 0 0.8rem .8rem;
+            background-color: $colorDarkBlue;
+
+            opacity: 0;
+            transition: all 100ms ease-in-out;
+
+            visibility: hidden;
+
+            img{
+                display: none;
+            }
+
+            li{
+                display: flex;
+                flex-direction: column;
+
+                a{
+                    font-size: 2.4rem;
+                    color: $colorWhite;
+                }
+            }
+        }
+    }
+}
+
+.show{
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+@media(min-width:1025px){
+    
+    .header{
+        
+        nav{
+            .iconNavMobile{
+                display: none;
+            }
+            .btnMenu{
+                display: none;
+            }
+            .menu{
+                visibility: visible;
+                opacity: 1;
+                height: fit-content;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 1.6rem;
+                gap: 6.4rem;
+                background-color: transparent;
+
+                img{
+                    display: block;
+                }
+
+                li{
+                    a{
+                        font-size: 2rem;
+                        position: relative;
+
+                        &::before{
+                            content: "";
+                            border: 1px solid $colorBlue;
+                            width: 0%;
+                            opacity: 0;
+                            display: block;
+
+                            position: absolute;
+                            bottom: -.2rem;
+        
+                            transition: all 300ms;
+                        }
+        
+                        &:hover{
+                            color: $colorBlue;
+                            &::before{
+                                width: 100%;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

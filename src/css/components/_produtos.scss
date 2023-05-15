@@ -1,0 +1,55 @@
+@import "../abstract/variables";
+
+.produtos{
+    padding: 6.4rem .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    .gridProdutos{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1.6rem;
+        width: 100%;
+
+        .cardProdutos{
+            width: 100%;
+            max-width: 474px;
+            height: 592px;
+            background-color: transparent;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            border-radius: .8rem;
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .produto01{
+            background-image: url(../assets/mediasocial01.png);
+        }
+
+        .produto02{
+            background-image: url(../assets/mediasocial02.png);
+        }
+
+        .produto03{
+            background-image: url(../assets/mediasocial03.png);
+        }
+
+        .produto04{
+            background-image: url(../assets/mediasocial04.png);
+        }
+    }
+}
+
+@media(min-width:1025px){
+    .produtos{
+        .gridProdutos{
+            flex-direction: row;
+        }
+    }
+}

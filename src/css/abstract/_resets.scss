@@ -1,0 +1,64 @@
+@import "../abstract/variables";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2{
+  font-size: 3.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $colorDarkBlue;
+}
+
+h3{
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $colorDarkBlue;
+}
+
+p{
+  color: $colorBlack;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+body{
+  width: 100%;
+  background-color: $colorWhite;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+html{
+    font-size: 1.6rem;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: .4rem;               /* largura de toda a barra de rolagem */
+}
+
+body::-webkit-scrollbar-track {
+  background: $colorWhite;        /* cor da área de rastreamento */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $colorDarkBlue;    /* cor do polegar de rolagem */
+  border-radius: 2px;       /* arredondamento do polegar de rolagem */
+  /*  border: 1px solid orange;  cria preenchimento em torno do polegar de rolagem */
+}

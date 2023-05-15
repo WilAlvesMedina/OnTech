@@ -1,0 +1,55 @@
+@import "../abstract/variables";
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(116.54deg, rgba(20, 108, 148, 0.8) 42.22%, rgba(25, 167, 206, 0.8) 100%), url(../assets/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: .8rem;
+    gap: 3.2rem;
+
+    h1{
+        color: $colorWhite;
+        font-size: 6.4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    p{
+        color: $colorWhite;
+        font-size: 1.6rem;
+        font-weight: 200;
+        text-align: center;
+    }
+
+    a{
+        color: $colorDarkBlue;
+        font-size: 1.6rem;
+        background-color: $colorWhite;
+        padding: .8rem 1.6rem;
+        border-radius: .4rem;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        transition: all 200ms ease-in-out;
+
+        &:hover{
+            color: $colorWhite;
+            background-color: $colorDarkBlue;
+        }
+    }
+}
+
+@media(min-width:1025px){
+    .hero{
+        padding: .8rem  12.8rem;
+    }
+}
+
