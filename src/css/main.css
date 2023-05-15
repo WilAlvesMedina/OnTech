@@ -297,7 +297,6 @@ body::-webkit-scrollbar-thumb {
   background-repeat: no-repeat;
   background-size: contain;
   border-radius: 0.8rem;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
 }
 .produtos .gridProdutos .produto01 {
   background-image: url(../assets/mediasocial01.png);
@@ -315,6 +314,9 @@ body::-webkit-scrollbar-thumb {
 @media (min-width: 1025px) {
   .produtos .gridProdutos {
     flex-direction: row;
+  }
+  .produtos .gridProdutos .cardProdutos {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
   }
 }
 .contatos {

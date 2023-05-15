@@ -25,7 +25,6 @@
             background-repeat: no-repeat;
             background-size: contain;
             border-radius: .8rem;
-            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
         }
 
         .produto01{
@@ -50,6 +49,10 @@
     .produtos{
         .gridProdutos{
             flex-direction: row;
+
+            .cardProdutos{
+                box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+            }
         }
     }
 }
